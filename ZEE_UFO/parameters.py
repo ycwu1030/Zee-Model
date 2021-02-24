@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Linux x86 (64-bit) (March 7, 2018)
-# Date: Fri 13 Dec 2019 17:08:17
+# Date: Wed 24 Feb 2021 15:52:48
 
 
 
@@ -549,6 +549,42 @@ sphi = Parameter(name = 'sphi',
                  value = 'cmath.sin(phi)',
                  texname = 's_{\\phi }')
 
+fl1x2 = Parameter(name = 'fl1x2',
+                  nature = 'internal',
+                  type = 'real',
+                  value = 'fem',
+                  texname = '\\text{fl1x2}')
+
+fl1x3 = Parameter(name = 'fl1x3',
+                  nature = 'internal',
+                  type = 'real',
+                  value = 'fet',
+                  texname = '\\text{fl1x3}')
+
+fl2x1 = Parameter(name = 'fl2x1',
+                  nature = 'internal',
+                  type = 'real',
+                  value = '-fem',
+                  texname = '\\text{fl2x1}')
+
+fl2x3 = Parameter(name = 'fl2x3',
+                  nature = 'internal',
+                  type = 'real',
+                  value = 'fmt',
+                  texname = '\\text{fl2x3}')
+
+fl3x1 = Parameter(name = 'fl3x1',
+                  nature = 'internal',
+                  type = 'real',
+                  value = '-fet',
+                  texname = '\\text{fl3x1}')
+
+fl3x2 = Parameter(name = 'fl3x2',
+                  nature = 'internal',
+                  type = 'real',
+                  value = '-fmt',
+                  texname = '\\text{fl3x2}')
+
 yzee = Parameter(name = 'yzee',
                  nature = 'internal',
                  type = 'real',
@@ -657,18 +693,6 @@ CKM3x3 = Parameter(name = 'CKM3x3',
                    value = '1',
                    texname = '\\text{CKM3x3}')
 
-mu12 = Parameter(name = 'mu12',
-                 nature = 'internal',
-                 type = 'real',
-                 value = '(MHL**2*(1 + cab**2 - sab**2) + MHH**2*(1 - cab**2 + sab**2))/4.',
-                 texname = '\\text{mu12}')
-
-mu32 = Parameter(name = 'mu32',
-                 nature = 'internal',
-                 type = 'real',
-                 value = '(cab*(-MHH**2 + MHL**2)*sab)/2.',
-                 texname = '\\text{mu32}')
-
 MW = Parameter(name = 'MW',
                nature = 'internal',
                type = 'real',
@@ -720,13 +744,13 @@ vev = Parameter(name = 'vev',
 mu22 = Parameter(name = 'mu22',
                  nature = 'internal',
                  type = 'real',
-                 value = '(MHpH**2*(1 + cphi**2 - sphi**2) + MHp**2*(1 - cphi**2 + sphi**2) - lam3*vev**2)/2.',
+                 value = '(2*cphi**2*MHpH**2 + 2*MHp**2*sphi**2 - lam3*vev**2)/2.',
                  texname = '\\text{mu22}')
 
 mueta2 = Parameter(name = 'mueta2',
                    nature = 'internal',
                    type = 'real',
-                   value = '(MHp**2*(1 + cphi**2 - sphi**2) + MHpH**2*(1 - cphi**2 + sphi**2) - lam8*vev**2)/2.',
+                   value = '(2*cphi**2*MHp**2 + 2*MHpH**2*sphi**2 - lam8*vev**2)/2.',
                    texname = '\\text{mueta2}')
 
 GHL = Parameter(name = 'GHL',
@@ -738,19 +762,19 @@ GHL = Parameter(name = 'GHL',
 lam1 = Parameter(name = 'lam1',
                  nature = 'internal',
                  type = 'real',
-                 value = '(MHL**2*(1 + cab**2 - sab**2) + MHH**2*(1 - cab**2 + sab**2))/(2.*vev**2)',
+                 value = '(cab**2*MHL**2 + MHH**2*sab**2)/vev**2',
                  texname = '\\text{lam1}')
 
 lam4 = Parameter(name = 'lam4',
                  nature = 'internal',
                  type = 'real',
-                 value = '(2*MHA**2 + MHH**2*(1 + cab**2 - sab**2) + MHL**2*(1 - cab**2 + sab**2) + 2*MHp**2*(-1 + cphi**2 - sphi**2) - 2*MHpH**2*(1 + cphi**2 - sphi**2))/(2.*vev**2)',
+                 value = '(MHA**2 + cab**2*MHH**2 - 2*cphi**2*MHpH**2 + MHL**2*sab**2 - 2*MHp**2*sphi**2)/vev**2',
                  texname = '\\text{lam4}')
 
 lam5 = Parameter(name = 'lam5',
                  nature = 'internal',
                  type = 'real',
-                 value = '(-2*MHA**2 + MHH**2*(1 + cab**2 - sab**2) + MHL**2*(1 - cab**2 + sab**2))/(2.*vev**2)',
+                 value = '(-MHA**2 + cab**2*MHH**2 + MHL**2*sab**2)/vev**2',
                  texname = '\\text{lam5}')
 
 lam6 = Parameter(name = 'lam6',
@@ -818,6 +842,18 @@ yup = Parameter(name = 'yup',
                 type = 'real',
                 value = '(ymup*cmath.sqrt(2))/vev',
                 texname = '\\text{yup}')
+
+mu12 = Parameter(name = 'mu12',
+                 nature = 'internal',
+                 type = 'real',
+                 value = '(lam1*vev**2)/2.',
+                 texname = '\\text{mu12}')
+
+mu32 = Parameter(name = 'mu32',
+                 nature = 'internal',
+                 type = 'real',
+                 value = '(lam6*vev**2)/2.',
+                 texname = '\\text{mu32}')
 
 I1a11 = Parameter(name = 'I1a11',
                   nature = 'internal',

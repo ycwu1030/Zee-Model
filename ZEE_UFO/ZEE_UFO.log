@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Linux x86 (64-bit) (March 7, 2018)
-# Date: Fri 13 Dec 2019 17:07:24
+# Date: Wed 24 Feb 2021 15:51:20
 
 
 # 
@@ -39,12 +39,36 @@
 
 # Vertices
    * Calling FeynmanRules for 1 Lagrangians.
-   * Number of classes vertices: 341
-   * Number of flavored vertices: 445
+   * Number of classes vertices: 321
+   * Number of flavored vertices: 469
    * Saved vertices in InterfaceRun[ 1 ].
    * Checked QNumber conservation.
       - Quantum number GhostNumber conserved in all vertices.
-      - Quantum number LeptonNumber conserved in all vertices.
+      - Quantum number LeptonNumber NOT conserved in the following vertices
+          {Hpbar, vebar, mubar}
+          {Hpbar, vebar, tabar}
+          {Hpbar, vmbar, ebar}
+          {Hpbar, vmbar, tabar}
+          {Hpbar, vtbar, ebar}
+          {Hpbar, vtbar, mubar}
+          {HpHbar, vebar, mubar}
+          {HpHbar, vebar, tabar}
+          {HpHbar, vmbar, ebar}
+          {HpHbar, vmbar, tabar}
+          {HpHbar, vtbar, ebar}
+          {HpHbar, vtbar, mubar}
+          {Hp, e, vm}
+          {Hp, e, vt}
+          {Hp, mu, ve}
+          {Hp, mu, vt}
+          {Hp, ta, ve}
+          {Hp, ta, vm}
+          {HpH, e, vm}
+          {HpH, e, vt}
+          {HpH, mu, ve}
+          {HpH, mu, vt}
+          {HpH, ta, ve}
+          {HpH, ta, vm}
       - Quantum number Q conserved in all vertices.
       - Quantum number Y conserved in all vertices.
    * particles.py written.
@@ -53,31 +77,19 @@
 # Vertex definitions
 #
 
-   * 499 vertices written.
+   * 475 vertices written.
    * vertices.py written.
 #
 # Lorentz structure definitions
 #
 
-   * 21 lorentz structures written.
+   * 20 lorentz structures written.
    * lorentz.py written.
 #
 # Coupling definitions
 #
 
-   >>>> Non positive interaction order QED found for coupling GC_265.
-   >>>> Non positive interaction order QED found for coupling GC_266.
-   >>>> Non positive interaction order QED found for coupling GC_273.
-   >>>> Non positive interaction order QED found for coupling GC_274.
-   >>>> Non positive interaction order QED found for coupling GC_277.
-   >>>> Non positive interaction order QED found for coupling GC_280.
-   >>>> Non positive interaction order QED found for coupling GC_285.
-   >>>> Non positive interaction order QED found for coupling GC_286.
-   >>>> Non positive interaction order QED found for coupling GC_287.
-   >>>> Non positive interaction order QED found for coupling GC_288.
-   >>>> Non positive interaction order QED found for coupling GC_289.
-   >>>> Non positive interaction order QED found for coupling GC_290.
-   * 397 couplings written.
+   * 363 couplings written.
    * couplings.py written.
 #
 # Coupling order definitions

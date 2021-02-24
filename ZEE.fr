@@ -1,7 +1,7 @@
 (***************************************************************************************************************)
 (******                       This is the FeynRules mod-file for the Zee model                            ******)
 (******                                                                                                   ******)
-(******                                   Authors: Yang Ma                                                ******)
+(******                              Authors: Yang Ma and Yongcheng Wu                                    ******)
 (******                                                                                                   ******)
 (****** Choose whether Feynman gauge is desired.                                                          ******)
 (****** If set to False, unitary gauge is assumed.                                                          ****)
@@ -14,11 +14,11 @@
 M$ModelName = "Zee Model";
 
 M$Information = {
-  Authors      -> {"Yang Ma"}, 
-  Version      -> "1.0.0",
-  Date         -> "04. 09. 2019",
-  Institutions -> {"University of Pittsburgh"},
-  Emails       -> {"mayangluon@pitt.edu"}
+  Authors      -> {"Yang Ma","Yongcheng Wu"}, 
+  Version      -> "1.1.0",
+  Date         -> "02. 24. 2021",
+  Institutions -> {"University of Pittsburgh","Oklahoma State University"},
+  Emails       -> {"mayangluon@pitt.edu","ycwu0830@gmail.com"}
 };
 
 FeynmanGauge = True;
